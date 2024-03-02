@@ -1,0 +1,13 @@
+<div>
+  <p>Your favorite number is {{ number || "...." }}</p>
+  <label for="fav-number">Favorite Number</label>
+  <input type="number" name="fav-number" id="fav-number" [(ngModel)]="number" />
+
+  <div>
+    <button>Random</button>
+  </div>
+
+  @if (isError) {
+  <div role="alert">Please enter a number between {{ min }} & {{ max }}</div>
+  }
+</div>
